@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket AI — Run Local LLMs On Your Phone | 100% Offline</title>
+    <meta name="description" content="Pocket AI is a private, on-device mobile AI assistant powered by GGUF local models and llama.cpp. Direct APK download for Android. Made in Pakistan.">
+    <meta name="keywords" content="Pocket AI, Pocket AI APK, Download Pocket AI Android, On-Device AI, Local LLM, GGUF Android, llama.cpp, Offline AI, HuggingFace Android">
+    <meta name="author" content="Salman | Made in Pakistan">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pocket AI — Private Local LLM Assistant on Android & iOS">
+    <meta property="og:description" content="Run GGUF AI models locally on your smartphone CPU. Download official Android APK now!">
+    <meta property="og:image" content="assets/logo.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+    <!-- Premium Google Fonts: Inter & Plus Jakarta Sans & Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Product Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-tag"><span class="pulse-emerald"></span> NEW RELEASE</div>
+            <span class="top-bar-text"><strong>Pocket AI v1.0.0</strong> is live — Run GGUF models offline on your smartphone.</span>
+            <a href="#download" class="top-bar-cta">Download APK <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="brand">
+                <img src="assets/logo.jpg" alt="Pocket AI Logo" class="brand-avatar">
+                <div class="brand-info">
+                    <span class="brand-title">Pocket AI</span>
+                    <span class="brand-version">v1.0.0 Native</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#download" class="nav-item nav-btn-highlight"><i class="fa-solid fa-download"></i> Download APK</a>
+                <a href="#features" class="nav-item">Features</a>
+                <a href="#models" class="nav-item">Models</a>
+                <a href="#pakistan" class="nav-item">About</a>
+                <a href="#faq" class="nav-item">FAQ</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="pk-badge" title="Made in Pakistan">
+                    <span class="flag">🇵🇰</span> Made in Pakistan
+                </div>
+                <a href="https://github.com/salmansniper56-cloud/PocketAI" target="_blank" rel="noopener" class="btn-github">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-ambient-spotlight"></div>
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <div class="launch-badge">
+                        <i class="fa-solid fa-shield-halved text-emerald"></i> 100% Offline • Zero Cloud Dependency
+                    </div>
+
+                    <h1 class="hero-heading">
+                        Local AI. On Your Phone.<br>
+                        <span class="hero-gradient-text">Complete Data Privacy.</span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        Pocket AI executes quantized GGUF models directly on your smartphone CPU via native C++ llama.cpp bindings. Download models straight from Hugging Face and chat offline.
+                    </p>
+
+                    <!-- Main Download & Action Buttons -->
+                    <div class="hero-actions">
+                        <a href="PocketAI.apk" download="PocketAI.apk" class="btn-primary-launch download-apk-trigger">
+                            <div class="btn-primary-icon">
+                                <i class="fa-brands fa-android"></i>
+                            </div>
+                            <div class="btn-primary-labels">
+                                <span class="primary-lbl">Download APK for Android</span>
+                                <span class="sub-lbl">Direct File Download • v1.0.0 (34.9 MB)</span>
+                            </div>
+                        </a>
+
+                        <button onclick="openIosModal()" class="btn-secondary-launch">
+                            <div class="btn-secondary-icon">
+                                <i class="fa-brands fa-apple"></i>
+                            </div>
+                            <div class="btn-secondary-labels">
+                                <span class="primary-lbl">iOS App <span class="tag-coming-soon">Coming Soon</span></span>
+                                <span class="sub-lbl">TestFlight Beta Signup</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Tech Badges -->
+                    <div class="hero-specs-row">
+                        <div class="spec-pill"><i class="fa-solid fa-microchip"></i> ARM NEON C++ Acceleration</div>
+                        <div class="spec-pill"><i class="fa-solid fa-database"></i> Local Room SQLite Storage</div>
+                        <div class="spec-pill"><i class="fa-solid fa-wifi-slash"></i> Airplane Mode Ready</div>
+                    </div>
+                </div>
+
+                <!-- Phone Visual -->
+                <div class="hero-visual-wrapper">
+                    <div class="phone-frame">
+                        <div class="phone-top-bar">
+                            <span class="time">9:41</span>
+                            <div class="phone-camera"></div>
+                            <span class="icons"><i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span>
+                        </div>
+
+                        <div class="phone-header">
+                            <div class="phone-brand">
+                                <img src="assets/logo.jpg" alt="Logo" class="phone-logo">
+                                <div>
+                                    <div class="phone-title">Pocket AI</div>
+                                    <div class="phone-sub"><span class="dot"></span> SmolLM 360M • Active</div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-sliders text-muted"></i>
+                        </div>
+
+                        <div class="phone-chat-area" id="heroChatStream">
+                            <div class="msg msg-user">
+                                <div class="bubble">Is my chat data processed locally on my phone?</div>
+                            </div>
+                            <div class="msg msg-ai">
+                                <div class="author"><i class="fa-solid fa-microchip"></i> Pocket AI Native Engine</div>
+                                <div class="bubble">
+                                    Yes! All inference tensors run inside your phone's CPU RAM using native llama.cpp compiled libraries. 0 bytes leave your device!
+                                </div>
+                                <div class="metrics"><i class="fa-solid fa-bolt text-emerald"></i> 38.4 t/s • TTFT: 180ms</div>
+                            </div>
+                        </div>
+
+                        <div class="phone-input">
+                            <input type="text" value="Explain how quantization works..." readonly>
+                            <button class="phone-send"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Official Download Section -->
+        <section class="download-section" id="download">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">GET THE APP</span>
+                    <h2 class="section-title">Official Download Center</h2>
+                    <p class="section-subtitle">Get the official Android APK file directly or sign up for early iOS TestFlight beta access.</p>
+                </div>
+
+                <div class="download-cards-grid">
+                    <!-- Android Card -->
+                    <div class="dl-card android-dl-card">
+                        <div class="card-status-badge status-live"><i class="fa-solid fa-circle-check"></i> Available Now</div>
+                        <div class="dl-icon android-icon"><i class="fa-brands fa-android"></i></div>
+                        <h3 class="dl-title">Android APK Release</h3>
+                        <p class="dl-desc">Official native Android build. Standalone APK installer for phones & tablets running Android 8.0+.</p>
+
+                        <div class="dl-specs-table">
+                            <div class="dl-spec"><span class="lbl">File</span> <strong>PocketAI.apk</strong></div>
+                            <div class="dl-spec"><span class="lbl">Size</span> <strong>34.9 MB</strong></div>
+                            <div class="dl-spec"><span class="lbl">Version</span> <strong>v1.0.0 Native</strong></div>
+                            <div class="dl-spec"><span class="lbl">Arch</span> <strong>ARM64-v8a</strong></div>
+                        </div>
+
+                        <div class="dl-actions">
+                            <a href="PocketAI.apk" download="PocketAI.apk" class="btn-primary-launch full-width download-apk-trigger">
+                                <i class="fa-solid fa-download"></i> Direct Download APK (34.9 MB)
+                            </a>
+                            <button onclick="toggleQrBox()" class="btn-outline-dark full-width">
+                                <i class="fa-solid fa-qrcode"></i> Scan QR Code on Phone
+                            </button>
+                        </div>
+
+                        <!-- Collapsible QR Code -->
+                        <div class="qr-container hidden" id="qrContainer">
+                            <div class="qr-card">
+                                <i class="fa-solid fa-qrcode qr-icon"></i>
+                                <p>Scan with your phone camera to download <strong>PocketAI.apk</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="install-steps-box">
+                            <span class="steps-title"><i class="fa-solid fa-info-circle"></i> Quick Installation:</span>
+                            <ol>
+                                <li>Tap <strong>Direct Download APK</strong> to save `PocketAI.apk`.</li>
+                                <li>Tap the file to install (Enable "Install from Unknown Sources" if prompted).</li>
+                                <li>Launch Pocket AI, download a GGUF model, and chat offline!</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- iOS Card -->
+                    <div class="dl-card ios-dl-card">
+                        <div class="card-status-badge status-beta"><i class="fa-solid fa-clock"></i> In Development</div>
+                        <div class="dl-icon apple-icon"><i class="fa-brands fa-apple"></i></div>
+                        <h3 class="dl-title">iOS & iPadOS Edition</h3>
+                        <p class="dl-desc">Native Swift & Metal GPU accelerated engine for iPhone and iPad currently in private beta testing.</p>
+
+                        <div class="dl-specs-table">
+                            <div class="dl-spec"><span class="lbl">Platform</span> <strong>iOS 16.0+</strong></div>
+                            <div class="dl-spec"><span class="lbl">Engine</span> <strong>Metal llama.cpp</strong></div>
+                            <div class="dl-spec"><span class="lbl">Distribution</span> <strong>Apple TestFlight</strong></div>
+                            <div class="dl-spec"><span class="lbl">Target</span> <strong>Q3 2026</strong></div>
+                        </div>
+
+                        <div class="ios-beta-callout">
+                            <i class="fa-solid fa-envelope-open-text text-gold"></i>
+                            <div>
+                                <strong>Join the TestFlight Beta</strong>
+                                <span>Receive an instant email invite when the iOS build goes live.</span>
+                            </div>
+                        </div>
+
+                        <div class="dl-actions">
+                            <button onclick="openIosModal()" class="btn-secondary-launch full-width">
+                                <i class="fa-solid fa-paper-plane"></i> Get Notified for iOS Launch
+                            </button>
+                            <a href="https://github.com/salmansniper56-cloud/PocketAI" target="_blank" rel="noopener" class="btn-github full-width center-text">
+                                <i class="fa-brands fa-github"></i> Star Repository on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid Feature Showcase -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">ARCHITECTURE & PRIVACY</span>
+                    <h2 class="section-title">Engineered for Performance</h2>
+                    <p class="section-subtitle">No bloat. No server lock-in. Built from the ground up for edge execution.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Bento Box 1: llama.cpp -->
+                    <div class="bento-card bento-wide">
+                        <div class="bento-icon"><i class="fa-solid fa-bolt text-emerald"></i></div>
+                        <h3>Native C++ llama.cpp Core</h3>
+                        <p>Leveraging compiled GGUF C++ bindings with SIMD vector instructions on ARM NEON. Delivers rapid token generation without burning battery.</p>
+                        <div class="code-preview-box">
+                            <span class="code-lang">Kotlin / C++ Bridge</span>
+                            <code>LlamaBridge.initContext(modelPath = ggufFile.path, nThreads = 4)</code>
+                        </div>
+                    </div>
+
+                    <!-- Bento Box 2: Hugging Face -->
+                    <div class="bento-card">
+                        <div class="bento-icon"><i class="fa-solid fa-cloud-arrow-down text-blue"></i></div>
+                        <h3>Hugging Face Hub Direct Download</h3>
+                        <p>Search millions of GGUF model weights straight from Hugging Face repositories with in-app resumable HTTP progress.</p>
+                    </div>
+
+                    <!-- Bento Box 3: 100% Offline -->
+                    <div class="bento-card">
+                        <div class="bento-icon"><i class="fa-solid fa-lock text-purple"></i></div>
+                        <h3>100% Offline SQLite Room</h3>
+                        <p>All chat sessions, personas, and system parameters are saved in a local SQLite Room database on your internal storage.</p>
+                    </div>
+
+                    <!-- Bento Box 4: Personas -->
+                    <div class="bento-card">
+                        <div class="bento-icon"><i class="fa-solid fa-masks-theater text-gold"></i></div>
+                        <h3>Custom AI Personas</h3>
+                        <p>Configure custom system instructions, avatars, colors, and temperature parameters for specific workflows.</p>
+                    </div>
+
+                    <!-- Bento Box 5: Offline Tools -->
+                    <div class="bento-card bento-wide">
+                        <div class="bento-icon"><i class="fa-solid fa-wand-magic-sparkles text-rose"></i></div>
+                        <h3>Autonomous Local Tool Talents</h3>
+                        <p>Built-in tools allowing local GGUF models to execute mathematical calculations and render responsive HTML widgets dynamically.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported Models Directory -->
+        <section class="models-section" id="models">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">COMPATIBLE MODELS</span>
+                    <h2 class="section-title">Supported Local GGUF Models</h2>
+                    <p class="section-subtitle">Download any quantized GGUF model directly from Hugging Face into Pocket AI with 1-click install.</p>
+                </div>
+
+                <div class="models-table-wrapper">
+                    <table class="models-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Parameters</th>
+                                <th>Quantization</th>
+                                <th>RAM Requirement</th>
+                                <th>File Size</th>
+                                <th>Best For</th>
+                                <th>HuggingFace</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="model-name-cell">
+                                        <i class="fa-solid fa-feather text-emerald"></i>
+                                        <div>
+                                            <strong>SmolLM 360M Instruct</strong>
+                                            <span class="author">HuggingFaceTB</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>0.36B</td>
+                                <td><span class="tag-quant">Q4_K_M</span></td>
+                                <td>~450 MB RAM</td>
+                                <td>240 MB</td>
+                                <td>Entry phones & rapid response</td>
+                                <td><a href="https://huggingface.co/HuggingFaceTB/SmolLM-360M-Instruct-GGUF" target="_blank" rel="noopener" class="link-hf"><i class="fa-solid fa-external-link"></i> HuggingFace</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="model-name-cell">
+                                        <i class="fa-solid fa-gem text-blue"></i>
+                                        <div>
+                                            <strong>Gemma 2 2B Instruct</strong>
+                                            <span class="author">Google / bartowski</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2.5B</td>
+                                <td><span class="tag-quant">Q4_K_M</span></td>
+                                <td>~1800 MB RAM</td>
+                                <td>1.6 GB</td>
+                                <td>General reasoning & writing</td>
+                                <td><a href="https://huggingface.co/bartowski/Gemma-2-2B-It-GGUF" target="_blank" rel="noopener" class="link-hf"><i class="fa-solid fa-external-link"></i> HuggingFace</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="model-name-cell">
+                                        <i class="fa-solid fa-brain text-purple"></i>
+                                        <div>
+                                            <strong>DeepSeek R1 Distill 1.5B</strong>
+                                            <span class="author">deepseek-ai</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>1.5B</td>
+                                <td><span class="tag-quant">Q4_K_M</span></td>
+                                <td>~1400 MB RAM</td>
+                                <td>1.1 GB</td>
+                                <td>Chain-of-thought logic & math</td>
+                                <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B-GGUF" target="_blank" rel="noopener" class="link-hf"><i class="fa-solid fa-external-link"></i> HuggingFace</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="model-name-cell">
+                                        <i class="fa-solid fa-code text-gold"></i>
+                                        <div>
+                                            <strong>Qwen 2.5 Coder 3B</strong>
+                                            <span class="author">Qwen</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>3.0B</td>
+                                <td><span class="tag-quant">Q4_K_M</span></td>
+                                <td>~2200 MB RAM</td>
+                                <td>2.1 GB</td>
+                                <td>Mobile programming & code debug</td>
+                                <td><a href="https://huggingface.co/Qwen/Qwen2.5-Coder-3B-GGUF" target="_blank" rel="noopener" class="link-hf"><i class="fa-solid fa-external-link"></i> HuggingFace</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="model-name-cell">
+                                        <i class="fa-solid fa-mobile-screen text-rose"></i>
+                                        <div>
+                                            <strong>Llama 3.2 1B Instruct</strong>
+                                            <span class="author">Meta / city96</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>1.0B</td>
+                                <td><span class="tag-quant">Q4_K_M</span></td>
+                                <td>~950 MB RAM</td>
+                                <td>850 MB</td>
+                                <td>Ultra-fast conversational assistant</td>
+                                <td><a href="https://huggingface.co/city96/Llama-3.2-1B-Instruct-GGUF" target="_blank" rel="noopener" class="link-hf"><i class="fa-solid fa-external-link"></i> HuggingFace</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pakistan Story Spotlight -->
+        <section class="pakistan-section" id="pakistan">
+            <div class="container">
+                <div class="pk-card">
+                    <div class="pk-grid">
+                        <div class="pk-info">
+                            <span class="pk-tag">🇵🇰 NATIONAL SPOTLIGHT</span>
+                            <h2>Made with Passion in Pakistan</h2>
+                            <p>
+                                Pocket AI was created by <strong>Salman</strong>, a software engineer in Pakistan driven by the mission to democratize edge AI. By running LLM parameters locally on mobile devices without subscription fees or data harvesting, Pocket AI gives full digital sovereignty back to users.
+                            </p>
+                            <div class="pk-bullets">
+                                <div><i class="fa-solid fa-heart text-rose"></i> <span>100% Free & Open Source for Everyone</span></div>
+                                <div><i class="fa-solid fa-microchip text-emerald"></i> <span>Optimized for ARM Mobile Architecture</span></div>
+                            </div>
+                        </div>
+                        <div class="pk-avatar-box">
+                            <img src="assets/logo.jpg" alt="Pocket AI Logo" class="pk-avatar-img">
+                            <div class="pk-caption">Pocket AI • Open Source 🇵🇰</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">FAQ</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Everything you need to know about APK installation, model files, and offline usage.</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-row">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            <span><i class="fa-brands fa-android text-emerald"></i> How do I install the Pocket AI APK on Android?</span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+                        <div class="faq-a">
+                            <p>Download `PocketAI.apk` directly using the download button on this site. Tap the downloaded file on your Android phone and enable "Install from Unknown Sources" if prompted.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-row">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            <span><i class="fa-solid fa-wifi-slash text-gold"></i> Does Pocket AI require internet to chat?</span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+                        <div class="faq-a">
+                            <p>No. Internet is only required once to download your chosen GGUF model file from Hugging Face. After downloading, turn on Airplane mode and chat 100% offline!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-row">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            <span><i class="fa-brands fa-apple text-blue"></i> When will the iOS version be ready?</span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+                        <div class="faq-a">
+                            <p>The iOS edition featuring Swift & Apple Metal GPU acceleration is in closed beta. Sign up above to receive an instant TestFlight invite when public beta opens.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- iOS TestFlight Modal -->
+    <div class="modal-backdrop hidden" id="iosModal">
+        <div class="modal-content">
+            <button class="modal-close-btn" onclick="closeIosModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header-icon"><i class="fa-brands fa-apple"></i></div>
+            <h3>Join the iOS TestFlight Beta</h3>
+            <p>Enter your email address to receive an invitation link as soon as the iOS beta opens.</p>
+
+            <form onsubmit="handleIosForm(event)" class="modal-form">
+                <input type="email" id="iosEmail" placeholder="Enter your email address..." required>
+                <button type="submit" class="btn-primary-launch full-width">Notify Me</button>
+            </form>
+            <div class="success-note hidden" id="iosSuccessNote">
+                <i class="fa-solid fa-circle-check text-emerald"></i> You're on the list! We'll email your TestFlight link soon.
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <div class="brand">
+                    <img src="assets/logo.jpg" alt="Logo" class="brand-avatar">
+                    <span class="brand-title">Pocket AI</span>
+                </div>
+                <p>100% private, on-device mobile AI assistant powered by GGUF local models and llama.cpp native engine.</p>
+                <span class="footer-pk">Made with ❤️ in Pakistan 🇵🇰</span>
+            </div>
+
+            <div class="footer-col">
+                <h4>Download</h4>
+                <a href="PocketAI.apk" download="PocketAI.apk"><i class="fa-brands fa-android text-emerald"></i> Android APK (34.9 MB)</a>
+                <a href="#download" onclick="openIosModal()"><i class="fa-brands fa-apple text-blue"></i> iOS TestFlight (Beta)</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Models</h4>
+                <a href="https://huggingface.co/HuggingFaceTB/SmolLM-360M-Instruct-GGUF" target="_blank" rel="noopener">SmolLM 360M</a>
+                <a href="https://huggingface.co/bartowski/Gemma-2-2B-It-GGUF" target="_blank" rel="noopener">Gemma 2B IT</a>
+                <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B-GGUF" target="_blank" rel="noopener">DeepSeek R1 1.5B</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Open Source</h4>
+                <a href="https://github.com/salmansniper56-cloud/PocketAI" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                <a href="https://github.com/ggml-org/llama.cpp" target="_blank" rel="noopener"><i class="fa-solid fa-cube"></i> llama.cpp Core</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Pocket AI. Open Source & 100% Private. Crafted in Pakistan 🇵🇰</p>
+                <div class="socials">
+                    <a href="https://github.com/salmansniper56-cloud/PocketAI" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
